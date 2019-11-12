@@ -18,10 +18,10 @@ struct Node {
 	bool isPromising;
 };
 
-//³»¸²Â÷¼ø Á¤·Ä
+//ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 struct cmpPQ {
 	bool operator()(const Node t, const Node u) {
-		return t.profit < u.profit;
+		return t.bound < u.bound;
 	}
 };
 
@@ -88,7 +88,7 @@ int knapsack(int W, Item arr[], int n) {
 			u.level = v.level + 1;
 			u.isPromising = true;
 
-			/*Áý¾î ³Ö´Â °æ¿ì*/
+			/*ì§‘ì–´ ë„£ëŠ” ê²½ìš°*/
 			u.weight = v.weight + arr[u.level].weight;
 			u.profit = v.profit + arr[u.level].value;
 
@@ -106,7 +106,7 @@ int knapsack(int W, Item arr[], int n) {
 			cout << u.level + 1 << "\t" << u.profit << "\t" << u.bound << "\n";
 			cnt++;
 
-			/*¾ÈÁý¾î ³ÖÀº °æ¿ì*/
+			/*ì•ˆì§‘ì–´ ë„£ì€ ê²½ìš°*/
 			u.weight = v.weight;
 			u.profit = v.profit;
 			u.bound = bound(u, n, W, arr);
@@ -121,7 +121,7 @@ int knapsack(int W, Item arr[], int n) {
 		}
 	}
 
-	return maxProfit; //maxprofitÀÌ return°ª
+	return maxProfit; //maxprofitì´ returnê°’
 }
 
 int main() {
