@@ -125,9 +125,9 @@ int knapsack(int W, Item arr[], int n) {
 }
 
 int main() {
-	int W = 13;   // Weight of knapsack 
-	//Item arr[] = { { 2, 40 },{ 5, 30 },{ 10, 50 },{ 5, 10 } };
-	Item arr[] = { { 2, 20 },{ 5, 30 },{ 7, 35 },{ 3, 12 },{ 1,3 } };
+	int W = 16;   // Weight of knapsack 
+	Item arr[] = { { 2, 40 },{ 5, 30 },{ 10, 50 },{ 5, 10 } };
+	//Item arr[] = { { 2, 20 },{ 5, 30 },{ 7, 35 },{ 3, 12 },{ 1,3 } };
 	int n = sizeof(arr) / sizeof(arr[0]);
 	
 	cout << "\nMaximum possible profit = " << knapsack(W, arr, n);
