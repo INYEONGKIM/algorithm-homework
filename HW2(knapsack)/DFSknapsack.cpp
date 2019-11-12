@@ -2,13 +2,13 @@
 #define SIZE 5
 using namespace std;
 
-//int p[5] = {0,40,30,50,10}; //profit
-//int w[5] = {0,2,5,10,5}; // weight
-int p[6] = { 0,20,30,35,12,3 }; //profit
-int w[6] = { 0,2,5,7,3,1 }; // weight
+int p[5] = {0,40,30,50,10}; //profit
+int w[5] = {0,2,5,10,5}; // weight
+//int p[6] = { 0,20,30,35,12,3 }; //profit
+//int w[6] = { 0,2,5,7,3,1 }; // weight
 
 
-int W = 13; //�ִ� weight
+int W = 16; //ÃÖ´ë weight
 
 int maxprofit = 0;
 int cnt=0;
